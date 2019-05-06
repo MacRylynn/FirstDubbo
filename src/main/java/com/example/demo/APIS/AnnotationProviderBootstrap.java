@@ -15,7 +15,7 @@ public class AnnotationProviderBootstrap {
 
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(ProviderConfiguration.class);
         context.start();
-        System.in.read();
+        System.in.read();//按任意键退出
     }
 
     @Configuration

@@ -10,8 +10,11 @@ public class AnnotationGreetingServiceImpl implements GreetingService {
 
     @Override
     public String greeting(String name) {
+        long org = System.currentTimeMillis();
         System.out.println("provider received invoke of Greeting: " + name);
-        sleepWhile();
+       //sleepWhile();
+        long now =System.currentTimeMillis();
+        System.out.println(now-org);
         return "Annotation, fine " + name;
     }
 

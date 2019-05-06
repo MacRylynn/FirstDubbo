@@ -7,7 +7,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 
-import java.util.Date;
+
 
 public class AnnotationConsumerBootstrap {
 
@@ -19,7 +19,10 @@ public class AnnotationConsumerBootstrap {
 
         System.out.println("hello :" + annotationAction.doSayHello("world"));
         System.out.println("goodbye :" + annotationAction.doSayGoodbye("world"));
+        long org = System.currentTimeMillis();
         System.out.println("greeting :" + annotationAction.doGreeting("world"));
+        long now = System.currentTimeMillis();
+        System.out.println(now-org);
         System.out.println("reply :" + annotationAction.replyGreeting("world"));
     }
 

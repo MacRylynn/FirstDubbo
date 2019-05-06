@@ -15,7 +15,7 @@ public class AnnotationAction {
     @Reference(interfaceClass = HelloService.class, version = AnnotationConstants.VERSION)
     private HelloService helloService;
 
-    @Reference(interfaceClass = GreetingService.class, version = AnnotationConstants.VERSION, methods = {@Method(name = "greeting", timeout = 350, retries = 1)})
+    @Reference(interfaceClass = GreetingService.class, version = AnnotationConstants.VERSION, methods = {@Method(name = "greeting", timeout = 250, retries = 1)})
     private GreetingService greetingService;
 
     public String doSayHello(String name) {

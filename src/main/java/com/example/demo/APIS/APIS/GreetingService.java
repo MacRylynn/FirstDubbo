@@ -11,6 +11,8 @@ public interface GreetingService {
         return "Fine, " + name;
     }
 
+
+    //异步执行的接口函数定义
     default CompletableFuture<String> greeting(String name, byte signal) {
         return CompletableFuture.completedFuture(greeting(name));
     }
